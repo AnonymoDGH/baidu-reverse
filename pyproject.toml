@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baidu-reverse"
+version = "0.1.0"
+description = "Reverse-engineered async Python client for Baidu Wenxin (chat.baidu.com) - text chat, streaming, reasoning"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Popbob" }]
+keywords = [
+    "baidu", "wenxin", "ernie", "chat.baidu.com", "reverse-engineered", "api",
+    "llm", "ai-chat", "deepseek",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "aiohttp>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "build>=1.0.0",
+]
+
+[project.scripts]
+baidu-reverse = "baidu_reverse.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["baidu_reverse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
