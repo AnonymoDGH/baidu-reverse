@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "baidu-reverse"
-version = "0.1.0"
-description = "Reverse-engineered async Python client for Baidu Wenxin (chat.baidu.com) - text chat, streaming, reasoning"
+version = "0.2.0"
+description = "Reverse-engineered async Python client for Baidu Wenxin (chat.baidu.com): streaming, reasoning, tool calling, long-chat memory, OpenAI-compatible server, captcha solver, proxy rotation"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -29,6 +29,15 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# Rotate-captcha solver: drives a real Chromium browser and predicts the rotation with a small CNN.
+captcha = [
+    "playwright>=1.40",
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "pillow>=10",
+    "numpy>=1.24",
+    "py7zr>=0.20",
+]
 dev = [
     "pytest>=8.0.0",
     "pytest-asyncio>=0.23.0",

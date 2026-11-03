@@ -29,7 +29,7 @@ WEATHER_TOOL = {
     },
 }
 
-MODELS = ["deepseek-r1", "smartmode", "deepseek-v4-pro", "deepseek-v4-flash", "ernie-5.1"]
+MODELS = ["deepseek-v4-pro", "deepseek-v4-flash", "smartmode", "ernie-5.1"]
 
 
 async def test_tool(chat: BaiduChat, model: str) -> dict:

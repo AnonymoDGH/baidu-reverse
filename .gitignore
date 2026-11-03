@@ -9,3 +9,8 @@ dist/
 *.log
 cookies.json
 admin_state.json
+*.sqlite
+.env
+# scratch probes / captured traffic / captcha samples (repo root only)
+/_*
+captcha_samples/

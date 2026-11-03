@@ -26,7 +26,7 @@ MODELS_TO_TEST = [
     "smartmode",
     "smartmode-thinking",
     "ernie-5.1",
-    "deepseek-r1",
+    "ernie-5.1-thinking",
     "deepseek-v4-pro",
     "deepseek-v4-flash",
     "deepseek-v4-flash-thinking",

@@ -38,7 +38,7 @@ ALL_MODELS = [
     "deepseek-v4-flash-thinking",
     "smartmode",
     "ernie-5.1",
-    "deepseek-r1",
+    "ernie-5.1-thinking",
 ]
 
 
